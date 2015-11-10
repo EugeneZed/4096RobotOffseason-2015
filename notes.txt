@@ -1,0 +1,32 @@
+
+DRIVE
+Joy0 X = turn
+Joy1 X = strafe
+Joy1 Y = forward/back
+
+Sol1 & 2, fwd/rev
+both fwd = clamp
+both rev = release
+
+right trigger while held = release, otherwise clamp
+
+LIFT
+Joy1 Y = winch, up = up
+only if L trigger is held
+
+motor 4&5
+5 = inverted
+joy2 Y up = 4 fwd, 5 rev at 0.5 speed
+except:
+when L shoulder down = winch @ full speed
+also:
+if joy1 _button_ down, invert 4&5 direction
+
+AUTO
+clamp on start, stay clamped
+after 0.75 sec, drive fwd 0.5 speed for 2.75 s
+stop, drop(?)
+
+winch, from start wait 0.5 s
+then motor 4 = 0.5, 5 = -0.5 for 2 s
+then wait
